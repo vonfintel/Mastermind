@@ -10,8 +10,6 @@ public class Gamestate
 {
     public List<int> answerNumbers = new List<int>();
     public bool isWon = false;
-    //public List<char> winCondition = new List<char>();
-    //public List<char> correctNumbers = new List<char>();
     Random rnd = new Random();
         
     public Gamestate()
@@ -47,6 +45,8 @@ public class Gamestate
         return true;
     }
 
+    //stores correct number with correct position into the win condition list. if there are 4 entries in win condition, the isWon is set to true and the player wins
+    //otherwise, stores correct numbers in wrong positions in the correctNumbers list.
     public void AnswerCheck(string userAnswer) {
         List<char> winCondition = new List<char>();
         List<char> correctNumbers = new List<char>();

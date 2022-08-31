@@ -8,13 +8,14 @@ class Caller
         Gamestate gamestate = new Gamestate();
         int tries = 10;
         string userInput = "";
-        //
-        Console.Write("Answer Key: ");
+        //for testing purposes, this prints the answer key if uncommented
+       
+        /* Console.Write("Answer Key: ");
         foreach (int number in gamestate.answerNumbers) {
             Console.Write(number);
         
         }
-        //
+       */
         Console.WriteLine();
         while (tries != 0) {
             while (!gamestate.CheckForValidAnswer(userInput))
